@@ -1,0 +1,211 @@
+* {
+    font-family: arial;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height : 747px;
+    background-color : #f5f5f5 ;
+}
+
+.nav-bar {
+    height : 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.nav-section {
+    height : 70px;
+    display: flex;
+    align-items: center;
+    margin-right : 30px;
+    margin-left : 30px;
+}
+
+.logo-section {
+    height: 40px;
+    width : 160px;
+}
+
+.logo {
+    height: 40px;
+    background-image: url("logo.svg");
+    background-size: cover;
+}
+
+
+/* BOX 2  */
+
+.nav-search {
+   height : 50px;
+   width : 720px;
+   display: flex;
+   align-items: center;
+   background-color: rgb(230, 238, 235);
+   border-radius: 4px;
+}
+.search-icon {
+    height : 40px;
+    width : 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-size : 1.3rem; 
+}
+.nav-input input {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width : 600px;
+    height : 30px;
+    border: none;
+    background-color: rgb(230, 238, 235);
+    font-size : 1.3rem;
+    font-family : sans-serif;
+}
+
+/* Box 3 */
+
+.nav-account {
+     height: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center; 
+     font-size : 1.2rem;
+     margin-left : 25px;
+}
+.nav-account i {
+   margin : 0px 10px 0px 0px;
+   padding-bottom : 4px;
+}
+
+.border {
+    border : 1px solid transparent;
+    padding : 5px;
+}
+.border:hover {
+    border : 1px solid black;
+}
+
+
+/* Box 4  */
+
+.nav-cart {
+    height : 30px;
+    width : 80px;
+    display: flex;
+     align-items: center;
+     justify-content: center; 
+     font-size : 1.2rem;
+     margin-left : 33px;
+}
+.nav-cart i {
+    margin : 0px 7px 0px 0px;
+}
+
+
+/* Box 5 */
+
+.nav-seller {
+    height : 30px;
+    width : 200px;
+    display: flex;
+     align-items: center;
+     justify-content: center; 
+     font-size : 1.2rem;
+     margin-left : 30px;
+}
+.nav-seller i {
+    margin : 0px 7px 2px 0px;
+}
+
+
+/* Box 6 */
+
+.nav-icon {
+    margin-left : 20px;
+    height : 30px;
+    display: flex;
+     align-items: center;
+     justify-content: center; 
+     font-weight: 100;
+}
+
+
+/* Main */
+
+/* Lower Head */
+
+.lowerhead {
+    height : 120px;
+    margin : 10px 30px 0px 30px;
+    background-color: #ffffff;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+}
+
+.lower-box {
+    height: 120px;
+    width : 130px;
+}
+
+.box-image {
+    height : 60px;
+    width : 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin : 10px 120px 0px 120px;
+}
+
+.lower-box-text {
+    display: flex;
+    /* text-align: center; */
+    margin : 10px 120px 0px 120px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+
+/* Main-Banner */
+
+.main-banner {
+    height : 170px;
+    margin : 15px 30px 0px 30px;
+    background-image : url("Banner-flipkart.webp");
+    background-size: cover;
+}
+
+/* Section */
+
+.box-area {
+    height : 70px;
+    margin: 15px 190px 0px 30px;
+    background-color: #ffffff;
+}
+
+.text-area {
+    height: 28px;
+    width : 1000px;
+    padding : 17px 12px; 
+    color : #212121;
+    font-size: 1.5rem;
+}
+
+
+.box-section {
+    height : 230px;
+    margin: 15px 190px 0px 30px;
+    background-color: blueviolet;
+}
+
+.box-images {
+    height : 212px;
+    width : 160px;
+    padding : 6px;
+    background-size : cover ;
+    margin : 4px;
+}

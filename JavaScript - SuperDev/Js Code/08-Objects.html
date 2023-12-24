@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Objects</title>
+</head>
+<body>
+   
+   <script>
+      const product = {
+         name : 'krushna',
+         price : 1000
+      };
+
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'Anushree';
+      product.price = 10;
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty ;
+      console.log(product);
+
+      // Part2 
+
+      const product2 = {
+         name : 'shirt',
+         'Delivery-Time' : '1 day',
+         rating: {
+            stars : 4.5,
+            count : 87
+         },
+         fun : function function1(){  //Methods
+            console.log('function inside object');
+         }
+      };
+
+      console.log(product2);
+      console.log(product2['name']);  //Another way of acessing the value 
+      console.log(product2['Delivery-Time']);
+
+      console.log(product2.rating.count);
+
+      product2.fun();
+
+      // Part 3
+     //Convert Js to json
+      console.log(JSON.stringify(product2));
+
+       //Convert Json to js
+       const jsonString = JSON.stringify(product2);
+       console.log(JSON.parse(jsonString));
+
+      //Part 4
+      // Auto-Boxing
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+
+      //Part 5
+      // Object references
+      //Object1 act as reference
+         const object1 = {
+            Message : 'hello'
+         }
+ 
+      //Object1 is copied in object2, thus both are pointing at same location as they are references
+         const object2 = object1;
+    
+      //Can change the values inside the object
+      object1.message = 'Good job';
+       console.log(object1);
+
+       //Cannot comapre object references directly
+         Console.log( object1 === object ); //false
+
+         Console.log( object1 === object ); //true
+         //Becz, object1 get copied into object2
+
+   </script>
+</body>
+</html>

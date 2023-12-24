@@ -1,0 +1,20 @@
+
+div {
+    color : white;
+}
+
+#box {
+   background-color: blue;
+}
+
+.Heading {
+    color : red;
+}
+
+/* h1, h2, h3 {      For multipe h tags, We can do this also
+    color : red;
+} */
+
+button {
+    background-color: green;
+}

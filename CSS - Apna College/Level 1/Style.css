@@ -1,0 +1,29 @@
+/* * {
+    color :rgb(255, 12, 12);
+} */
+
+h1 {
+    color: red;
+}
+
+p {
+    color : red;
+}
+
+button {
+   color : red;
+   background-color: yellow;
+}
+
+/* body {
+    background-color : rgb(255,255,46);
+} */
+
+#HeadingOne {
+    color : blue;
+}
+
+.classOne {
+    color : grey;
+}
+

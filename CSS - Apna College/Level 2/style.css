@@ -1,0 +1,20 @@
+h1{
+    height : 100px;
+    width : 500px;
+    background-color: rgb(172, 220, 172);
+    border-width: 5px;
+    border-style: dashed ;
+    border-color: blue;
+    text-align: center;  /* it will align the content with respect to height & width */
+}
+
+div {
+    height:150px;
+    width : 150px;
+    background-color:rgb(236, 167, 167);
+    border : 4px solid brown ;
+    border-radius : 10px;
+    padding : 20px;
+    margin : 25px;
+    /* border-radius : 50%;  /* For circular border when height & width are same */
+}

@@ -1,0 +1,13 @@
+div {
+    height : 300px;
+    width : 300px;
+    display: inline-block;
+    background-image: url(A_boy.jpg);
+    background-size: cover;
+    color : white
+}
+div {
+    position: fixed;
+    right : 10px;
+    top : 50px;
+}

@@ -1,0 +1,21 @@
+div {
+    height : 400px;
+    width : 400px;
+    background-color : rgb(144, 144, 220);
+    border : 2px solid black;
+    display : inline-block;
+}
+
+#box1 {
+  position : relative ;
+  left : 30px;
+  bottom: 10px;
+  background-image: url(A_boy.jpg);
+  background-size: cover;
+}
+
+#box2 {
+    position : relative ;
+    z-index : -1;
+}
+  

@@ -1,0 +1,29 @@
+/* button {
+    display : block;
+} */
+
+div {
+    width : 100px;
+    height : 100px;
+    padding : 25px;
+    margin : 25px;
+    display :inline-block;
+}
+
+#box1 {
+    display: none;  /* The box1 is removed */
+    visibility : hidden;  /* The box1 is removed but the space is created*/
+}
+
+pre {
+    width : 100px;
+    height : 100px;
+    padding : 25px;
+    margin : 25px;
+    background-color: blue;
+  color : rgba(255,0,0,1);
+}
+/* #one {
+    background-color : pink;
+    display: inline;
+} */

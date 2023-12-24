@@ -1,0 +1,27 @@
+div {
+    height : 200px;
+    width : 200px;
+    border : 2px solid black;
+    background-color: aquamarine;
+    position : absolute;
+    top : 120px;
+    left : 120px;
+    /* transform : rotateZ(360deg); */
+
+   transform : scale(1,1);
+  
+   transition: all 1s ease-in 1s;
+}
+
+div:hover { /*When the mouse click to the section on web page,its properties changes like below */
+    background-color : red;
+    color : white ; 
+    font-size: 25px;
+    /* transform: scaleX(2); */
+    
+    /* rotate: 360deg; */
+   
+    transform: translate(100px, 40px);  /* To move left right bottom top we use translate */
+
+   /* transform: skew(45deg); */
+}

@@ -1,0 +1,36 @@
+#one {
+    height : 100px;
+    width : 100px;
+    background-color: green;
+    border-radius : 50%
+}
+
+#two {
+    height : 370px;
+    width : 160px;
+    background-color: rgb(13, 13, 13);
+    border : 10px;
+    padding-top : 10px;
+    padding-left : 35px;
+}
+#three {
+    height : 100px;
+    width : 100px;
+    background-color: red;
+    border-radius : 50%;
+    margin-bottom: 10px;
+}
+#four {
+    height : 100px;
+    width : 100px;
+    background-color: yellow;
+    border-radius : 50%;
+    margin-bottom: 10px;
+}
+#five {
+    height : 100px;
+    width : 100px;
+    background-color: green;
+    border-radius : 50%;
+    margin-bottom: 10px;
+}

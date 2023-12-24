@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document Object Model</title>
+</head>
+<body>
+   
+<button> Hello </button>
+<button class="js-button"> Second button</button>
+   
+   <Script>
+
+       document.body.innerHTML = 'hello';
+       document.title = 'Mom';
+
+       console.log(document.title);
+       document.title = 'Changed';
+
+       console.log(document.body); //Everything inside body
+       console.log(typeof document.body); //object
+
+       console.log(document.body.innerHTML); //changes everything inside the body related to html
+       document.body.innerHTML = 'changed';
+       document.body.innerHTML = '<button> Good job </button>';
+
+       
+      console.log(document.querySelector('button').innerHTML);
+
+      document.querySelector('button').innerHTML = 'Changed';
+
+
+      //document.querySelector('.js-button'); 
+     const buttonElement = document.querySelector('.js-button').innerHTML;
+     console.log(buttonElement);
+
+     
+   </Script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+div {
+    height : 200px;
+    width : 200px;
+    border : 2px solid black;
+    background-color: aquamarine;
+    /* transition-property:all; /* Define who we have this property 
+    transition-duration: 2s;
+    transition-timing-function: steps(4);
+    transition-delay: 1s; */
+    transition : all 2s steps(3) 1s ;
+}
+
+div:hover { /*When the mouse click to the section on web page,its properties changes like below */
+    background-color : red;
+    color : white ; 
+    font-size: 25px;
+}
+
+ div:active {  /* when we continuosly hold the mouse then active state occur */
+    background-color : yellow;
+    color : blue ; 
+}

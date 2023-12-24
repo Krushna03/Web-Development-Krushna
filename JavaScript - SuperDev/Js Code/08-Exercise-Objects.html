@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Objects Exercise</title>
+</head>
+<body>
+   <script>
+   // 1)
+     const Basketball = {
+         name : 'basketball',
+         price : 2095
+     };
+     // console.log(product);
+      const { name, price } = Basketball;
+      console.log(name);
+      console.log(price);
+  
+   // 2)
+      //Basketball.price += 500;
+      // console.log(Basketball);
+      console.log(Basketball.price + 500);
+
+   // 3)
+   const product = {
+         name : 'basketball',
+         price : 2095,
+         ['delivery-time'] : '3 days'
+     };  
+     console.log(product);
+
+
+   // 4) 
+   const product1 = {
+         name : 'ball',
+         price : 250,
+     }; 
+     
+     const product2 = {
+         name : 'bat',
+         price : 200,
+     };   
+
+   function comparePrice(prodcut1 , product2){
+         if(prodcut1.price < product2.price){
+            return product1;
+         }
+         else {
+            return product2;
+         }
+   };     
+   console.log(comparePrice(product1, product2));
+
+
+   // 5)
+   const product3 = {
+         name : 'bat',
+         price : 250,
+     }; 
+     
+    const product4 = {
+         name : 'bat',
+         price : 250,
+     };   
+
+   function isSameProduct(prodcut3 , product4){
+         if(product3.name === product4.name &&
+            product3.price === product4.price){
+            return true;
+         }
+         else {
+            return false;
+         }
+   };    
+   console.log(isSameProduct(product3, product4)); 
+
+
+   // 6)
+   myString = "HeLLo WoRLD!"; 
+   let lowerCaseString = myString. 
+   toLowerCase(); 
+   console.log(lowerCaseString);
+   // output: "hello world!"
+
+   string = 'HITHERE';
+   console.log(string.toLowerCase());
+
+
+   // 7) 
+   // Function to repeat a string
+       function repeatString(str, times) {
+       return str.repeat(times);
+      }
+
+   // Example usage
+      const originalString = "Hello, ";
+      const repeatedString = repeatString(originalString, 3);
+
+     console.log(repeatedString); // Output: Hello, Hello, Hello,
+   
+
+
+     //8)
+     let calculation = localStorage.getItem('Calculation') || '';
+
+     function updateCalculation(value){
+       calculation += value;
+       console.log(calculation);
+   }
+ 
+   localStorage.setItem('Calculation' , calculation);
+   
+    if( calculation === undefined){
+      calculation = '';
+    }
+
+   //  let calculation = '';
+  
+</script>
+
+
+     <h2>Calculator</h2>
+<p>
+   <button onclick="updateCalculation('1');"> 
+      1 
+   </button>
+
+   <button onclick="updateCalculation('2');"> 
+       2
+   </button>
+
+   <button onclick="updateCalculation('3');"> 
+      3 
+   </button>
+
+   <button onclick="updateCalculation('+');"> 
+      + 
+   </button>
+</p>
+
+<p>
+   <button onclick="updateCalculation('4');"> 
+      4
+   </button>
+
+   <button onclick="updateCalculation('5');"> 
+       5
+   </button>
+
+   <button onclick="updateCalculation('6');"> 
+      6
+   </button>
+
+   <button onclick="updateCalculation('-');"> 
+      - 
+   </button>
+</p>
+
+<p>
+   <button onclick="updateCalculation('7');"> 
+      7
+   </button>
+
+   <button onclick="updateCalculation('8');"> 
+      8
+   </button>
+
+   <button onclick="updateCalculation('9');"> 
+      9
+   </button>
+
+   <button onclick="updateCalculation('*');"> 
+      * 
+   </button>
+</p>
+
+<p>
+   <button onclick="updateCalculation('0');"> 
+      0
+   </button>
+
+   <button onclick="updateCalculation('.');"> 
+       .
+   </button>
+
+   <button onclick="calculation=eval(calculation);
+      console.log(calculation);"> 
+      = 
+   </button>
+
+   <button onclick="updateCalculation('/');"> 
+      / 
+   </button>
+</p>
+
+<p>
+   <button onclick=" calculation='';
+      console.log(calculation);">
+      Clear
+   </button>
+</p>
+
+</body>
+</html>

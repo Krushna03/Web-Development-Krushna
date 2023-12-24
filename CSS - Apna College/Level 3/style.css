@@ -1,0 +1,28 @@
+#Parent {
+    height : 100px;
+    width : 200px;
+    background-color: green;
+    font-size : 10px;
+}
+
+#Child {
+    /* height : 50px;  */
+    width : 40%;
+    margin-left: 30% ;
+    background-color:yellow; 
+    font-size : 2em ;
+    width : 5em;    /* This is the width of font which is given by font-size of box2:20, 10px*2em=20px
+                        so the width of text is 20*5=100. So, width of text is 100px*/
+    width : 5rem;   /*By default the width of Hello was 18px so the 18*5=80px , 
+                      Thus rem depends on the root size of root element (Super Parent like body)*/
+    /* height : 100vh;  */
+    /* width : 100vw; */
+}
+
+/* #samosa {
+  height : 0;
+  width : 0;
+   border-left: 50px solid transparent;
+   border-right: 50px solid transparent;
+   border-bottom: 50px solid black;
+} */

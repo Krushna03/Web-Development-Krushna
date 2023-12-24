@@ -1,0 +1,51 @@
+.heart {
+    height : 200px;
+    width : 200px;
+    background-color: red;
+    margin : 100px;
+    position: relative;
+    rotate: 45deg;
+    animation: heart 1s linear infinite ;
+}
+
+.heart::after,
+.heart::before {
+    content: " ";
+    height : 200px;
+    width : 200px;
+    background-color: red;
+    border-radius : 50%;
+    position: absolute;
+}
+
+.heart::after{
+    top : -100px;
+    right : 0px;
+}
+
+.heart::before {
+    top: 0px;
+    left : -100px;
+}
+
+@keyframes heart {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.main {
+    width : 500px;
+    font-size: larger;
+    font-weight: 1000;
+    padding-left: 120px;
+}
+
+p {
+    font-size: larger;
+    font-weight: 1000;
+    padding-left : 10px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Boolean Excersice</title>
+</head>
+<body>
+   <script>
+//  1)    
+     const hour = 20;
+     if(hour < 6 &&  12 >= hour ){
+       console.log('Good morning');
+     }
+     else if( hour <= 13 && 17 >= hour ){
+      console.log('Good Afternoon');
+     }
+     else {
+      console.log('Good night');
+     }
+
+   //2)
+     const name = 'Krushna';       
+     if(hour < 6 &&  12 >= hour ){
+       console.log(`Good morning ${name}`);
+     }
+     else if( hour <= 13 && 17 >= hour ){
+      console.log(`Good Afternoon ${name}`);
+     }
+     else {
+      console.log(`Good night ${name}`);
+     }
+
+// 3)
+    const age = 5;
+    if(age <= 6 || age >= 65){
+      console.log('Discount');
+    }
+    else {
+      console.log('No Discount');
+    }
+
+// 4)
+    const isHoliday = true;
+    if ((age <= 6 || age >= 65) && !isHoliday){
+      console.log('Discount');
+    }
+    else {
+      console.log('No Discount');
+    }
+
+// 5)
+     let random = Math.random();
+     if(random <0.5){
+      console.log('heads');
+     }
+
+     else {
+      console.log('tails');
+     }
+
+// 6)
+     random = Math.random();
+     let result;
+     if(random <0.5){
+       result = 'head';
+     }
+     else {
+       result = 'tails';
+     }
+
+    let guess = 'head';
+    if( guess === result){
+      console.log('You win!');
+    }
+    else {
+      console.log('You loose!')
+    }
+
+// 7)
+      const randomNumber = Math.random();
+      result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      guess = 'heads';
+      console.log(guess === result ? 'You win!' : 'You lose!');
+
+
+
+    // Challenge 
+      let cartQuantity = 0;
+
+ </script>
+ 
+ <!-- 8) -->
+   
+
+   <button onclick="
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+      if (cartQuantity + 1 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity++;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">Add to Cart</button>
+
+    <button onclick="
+      if (cartQuantity + 2 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 2;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+2</button>
+
+    <button onclick="
+      if (cartQuantity + 3 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity = cartQuantity + 3;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+3</button>
+
+    <button onclick="
+      if (cartQuantity + 4 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 4;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+4</button>
+
+    <button onclick="
+      if (cartQuantity + 5 > 10) {
+        alert('The cart is full');
+      } else {
+        cartQuantity += 5;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+    ">+5</button>
+
+      <button onclick="
+      if (cartQuantity - 1 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity--;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+      ">Remove from cart</button>
+
+      <button onclick="
+      if (cartQuantity - 2 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity -= 2;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+      ">-2</button>
+
+      <button onclick="
+      if (cartQuantity - 3 < 0) {
+        alert('Not enough items in the cart');
+      } else {
+        cartQuantity -= 3;
+        console.log(`Cart quantity: ${cartQuantity}`);
+      }
+      ">-3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+
+
+</body>
+</html>

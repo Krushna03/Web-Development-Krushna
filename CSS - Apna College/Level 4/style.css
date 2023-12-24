@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+div {
+    height: 70px;
+    width : 70px;
+    border : 3px solid black;
+    display: inline-block;
+}
+#container {
+    height : 200px;
+    width : 800px;
+    display: flex;  /* It is flex initialiser  */
+    flex-direction: row; /*The flex-items will get fixed automatically inside the conatainer taking same space each */
+    justify-content: space-between; 
+    flex-wrap : nowrap;
+   align-items: center;
+} 
+
+#box1 {
+    background-color: pink;
+}
+#box2 {
+    background-color: yellow;
+}
+#box3 {
+    background-color: green;
+}
+#box4 {
+    background-color: red;
+}
+#box5 {
+    background-color: brown;
+}

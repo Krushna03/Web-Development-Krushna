@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+div {
+    height: 120px;
+    width : 100px;
+    display: inline-block;
+    border : 3px solid black;
+}
+#container {
+    height : 600px;
+    width : 800px;
+    display: flex;  /* It is flex initialiser  */
+    flex-direction: row; 
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    align-content: center; /*to center the content boxes of div */
+}
+
+#box1 {
+    background-color: pink;
+    flex-grow: 2;
+}
+#box2 {
+    background-color: yellow;
+    height: 200px;
+}
+#box3 {
+    background-color: green;
+    height: 75px;;
+}
+#box4 {
+    background-color: red;
+     flex-shrink: 3;  /* Reduces its size by 3 by container to flex box size ratio */
+} 
+#box5 {
+    background-color: brown;
+    align-self: flex-start ;
+}

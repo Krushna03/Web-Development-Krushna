@@ -1,0 +1,29 @@
+HTML Imp :
+
+<a href="jvdccd" > Job </a>
+
+<img src="jcdjdj" alt="Google" > Google </img> 
+
+<a href="kcdd" target=_"main" > goggle </a>
+
+<a href="knddn" > <img="ndjd"> jkdc </a>
+
+
+block :Takes full width
+ div , p , ul , ol , table , footer , header , pre 
+
+inline : Takes its own size space 
+  span , a , select , input , img , i
+
+
+<input type="text" placeholder="Enter name" >  
+
+<textarea name="feedback" placeholder="Enter the feedback" >
+
+<select  name="city" id="city" > 
+    <option value="Delhi" > delhi </option>
+</select>
+
+
+
+CSS Imp :

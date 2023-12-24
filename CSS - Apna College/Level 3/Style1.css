@@ -1,0 +1,32 @@
+div {
+    height : 100px;
+    width : 100px;
+    background-color : rgb(144, 144, 220);
+    border : 2px solid black;
+    display : inline-block;
+}
+
+#box1 {
+    position: static;
+    top : 100px;
+}
+#box2 {
+    position : relative; 
+    top : 20px;
+    left : 10px;
+}
+#box3 {
+    position :absolute; /* This position will be taken w r to the parent means body */
+     top : 20px;        /* (In this, the remaining below things will get hide temporaryily */
+     left : 20px
+}
+#box5 {
+    position : sticky ;
+    top : 0;
+    /* It will stick to its position */
+}
+#box4 {
+    position : fixed ;
+    right : 50px;
+    top : 0;   /* Here box4 will be get fixed connected at top like a nav bar */
+}
