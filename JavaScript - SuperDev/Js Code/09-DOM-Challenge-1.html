@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Challenge DOM</title>
+</head>
+<body>
+   
+   <!-- 1 -->
+   <p> Amazon Shipping Calculator</p>
+   <p> Amount : order below $40 : $10 Shipping Charges</p>
+    
+    <input type="text" placeholder="Cost of Order" class="js-input"  onkeydown="handleCostKeyDown(event)">
+    
+    <button onclick="calculation()">Calculate</button>
+    <p class="js-totalcost"></p>
+
+    <br><br><br><br>
+
+ <!-- 2 -->
+   <input type="text" placeholder="Name" class="input" onkeydown="keyboard(event)" onkeyup="submit()">
+   <button class="input-button" onclick="submit()" >Submit</button>
+   <p class="name-para"></p>
+
+
+
+<script>
+   //1
+      function calculation(){
+       const Calculate = document.querySelector('.js-input');
+       let cost = Number(Calculate.value) * 100; 
+       //Math.round(cost);
+      if( cost <= 4000){
+        cost = cost + 1000;
+      }
+
+      document.querySelector('.js-totalcost')
+      .innerHTML = `$${cost/100}`;
+   }
+
+
+   //2
+   function submit() {
+    const nameClick = document.querySelector('.input');
+     let name = nameClick.value;
+
+    document.querySelector('.name-para').innerHTML = `Your name is : ${name}`;
+   }
+   function keyboard(event){
+      if(event.key === 'Enter'){
+          submit();
+      }
+   }
+
+</script>
+</body>
+</html>

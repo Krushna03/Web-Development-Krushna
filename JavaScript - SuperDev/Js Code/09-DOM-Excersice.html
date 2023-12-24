@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <!-- 1 , 2 -->
+    <button class="button-1"> 9a </button>
+    <button class="button-2"> 9b </button>
+
+
+<br><br><br><br><br><br>
+
+   <!-- 3 -->
+    <button class="head" onclick="clickHead()"> heads </button>
+    <button class="tail" onclick="clickTail()"> tails </button>
+    <p class="result"> </p>
+
+   <br><br><br><br><br>
+
+   <!-- 4 -->
+   <input type="text" placeholder="Name" class="input" onkeydown="keyboard(event)">
+   <button class="input-button" onclick="submit()" >Submit</button>
+   <p class="name-para"></p>
+
+<script> 
+   //1)
+       console.log(document.querySelector('button'));
+
+
+   //2)
+   console.log(document.querySelector('.button-2').innerHTML = '9b Done!');
+
+
+   //3)
+   function clickHead() {
+      document.querySelector('.result').innerHTML = 'You chose : heads';
+   }
+   function clickTail() {
+      document.querySelector('.result').innerHTML = 'You chose : tails';
+   }
+
+
+   //4)
+   function submit() {
+    const nameClick = document.querySelector('.input');
+     let name = nameClick.value;
+
+    document.querySelector('.name-para').innerHTML = `Your name is : ${name}`;
+   }
+   function keyboard(event){
+      if(event.key === 'Enter'){
+          submit();
+      }
+   }
+
+</script>
+
+</body>
+</html>
