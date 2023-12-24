@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form creation</title>
+</head>
+<body>
+
+<main>
+ <h3> Registeration Form </h3>
+
+    <form action="/action.php">
+
+    <input type="text" placeholder="Type something here">
+<br>
+<br>
+        <input type="text" placeholder="Username">
+        <br>
+        <br>
+        <input type="password" placeholder="Password">
+<br> 
+<br>
+<!--Always, Display & Value should be same.Here class tells information of what we want to make-->
+<h3> Select your class </h3>
+    <input type="radio" value="XI" name="class"> ClassXI
+    <input type="radio" value="XII" name="class"> ClassXII
+<br>
+<br>
+  <!-- Label - More clickable than normal above radio -->
+     <label for="id1">
+        <input type="radio" value="XI" name="class" id="id1"> ClassXI
+     </label>
+     <label for="id2">
+        <input type="radio" value="XI" name="class" id="id2"> ClassXI
+     </label>
+<br>
+<br>
+
+<!-- CheckBoxes -->
+<h4> Select the subject </h4>
+  <label for="Math">
+      <input type="checkbox" value="classx"  name="subject" id="1"> Math
+  </label>
+<br>
+   <label for="Math">
+      <input type="checkbox" value="classx"  name="subject" id="1"> Science
+   </label>
+<br>
+  <label for="Math">
+      <input type="checkbox" value="classx"  name="subject" id="1"> English
+  </label>
+<br>
+<br>
+
+<h4>Select Your City</h4>
+<!-- Multiple choice otpion box -->
+<select name="City" id="101">
+    <option value="Pune">Pune</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Nagpur">Nagpur</option>
+    <option value="Mumbai">Mumbai</option>
+</select>
+<br>
+<br>
+
+
+<h4>Feedbak</h4> 
+<!-- TextArea ? Used specifically for feedback -->
+    <textarea name="feedback" id="1" cols="20" rows="14" placeholder="Please give your feedback"> 
+    Feedback</textarea>
+<br>
+
+   <!-- Submit -->
+   <input type="Submit" value="Submit">
+<br>
+
+</form>
+
+</main>
+
+
+</body>
+</html>
