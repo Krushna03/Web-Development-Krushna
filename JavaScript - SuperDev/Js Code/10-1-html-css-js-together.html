@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HTML CSS JS</title>
+
+   <style>
+      body {
+         font-family : arial;
+      }
+
+      .sub-button {
+         background-color: black;
+         color : white;
+         border : none;
+         padding : 12px;
+         font-weight :700;
+         font-family: arial;
+         border-radius : 25px;
+         cursor: pointer;
+        }
+
+        .is-subscribed {
+           background-color: rgb(240, 240, 240);
+           color : black;
+        }
+
+        .js-input{
+           font-size : 15px;
+           padding : 10px;
+        }
+
+        .calculate-button{
+         font-size : 15px;
+           padding : 10px;
+           background-color: green;
+           color : white;
+           cursor : pointer;
+        }
+
+   </style>
+
+
+</head>
+<body>
+   
+   <h2>Youtube Subscribe Button</h2>
+   
+   <button class="sub-button" onclick="subClick()" 
+   >Subscribe</button>
+   
+   <br><br><br><br>
+
+   <h2> Amazon Shipping Calculator</h2>
+   <p> Amount : order below $40 : $10 Shipping Charges</p>
+    
+    <input type="text" placeholder="Cost of Order" class="js-input"  onkeydown="handleCostKeyDown(event)">
+    
+    <button onclick="calculation()" class="calculate-button">Calculate</button>
+    <p class="js-totalcost"></p>
+
+
+   <script>
+       function subClick() {
+         const subbutton = document.querySelector('.sub-button');
+         if(subbutton.innerHTML === 'Subscribe'){
+            subbutton.innerHTML = 'Subscribed';
+            subbutton.classList.add('is-subscribed'); 
+            //This adds a class inside this function  
+         }
+         else {
+            subbutton.innerHTML = 'Subscribe';
+            subbutton.classList.remove('is-subscribed');
+         }
+       }
+   
+
+      //2
+       function calculation(){
+       const Calculate = document.querySelector('.js-input');
+       let cost = Number(Calculate.value) * 100; 
+       //Math.round(cost);
+      if( cost <= 4000){
+        cost = cost + 1000;
+      }
+
+      document.querySelector('.js-totalcost')
+      .innerHTML = `$${cost/100}`;
+   }
+   </script>
+</body>
+</html>

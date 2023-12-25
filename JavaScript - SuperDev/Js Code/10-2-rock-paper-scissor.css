@@ -1,0 +1,43 @@
+.title {
+   font-family: arial;
+   font-weight :700
+}
+
+ body {
+   background-color: rgb(25,25,25);
+   color : white;
+ }
+
+ .Images-button {
+    height : 60px;
+ }
+
+ .button-style {
+   background-color: transparent;
+   border: 3px solid white;    
+   padding : 30px;
+   border-radius: 50%;
+   margin-left : 20px;
+   cursor: pointer;
+ } 
+
+ .js-result {
+    font-size : 25px;
+    padding-top : 40px;
+ }
+
+ .css-moves1 {
+   height : 60px;
+ }
+
+ .score {
+   margin-top : 60px;
+ }
+
+ .resert-css {
+   background-color: white ;
+   border : none;
+   font-size : 15px;
+   padding : 8px 15px;
+   cursor : pointer;
+ }

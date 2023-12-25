@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rock Paper Scissor</title>
+
+   <link rel="stylesheet" href="10-2-rock-paper-scissor.css">
+
+</head>
+<body>
+   <h1 class="title">Rock Paper Scissor</h1>
+
+   <button onclick="playGame('Rock');" class="button-style">
+     <img src="rock-emoji.png" class="Images-button">
+   </button>
+
+
+   <button onclick="playGame('Paper');" class="button-style">
+      <img src="paper-emoji.png" class="Images-button">
+   </button>
+
+
+   <button onclick="playGame('Scissor');"  class="button-style">
+     <img src="scissors-emoji.png" class="Images-button">
+   </button>
+
+   
+   <p class="js-result"></p>
+   <p class="js-moves"></p>
+   <p class="js-score score"></p>
+
+
+   <button  onclick ="
+    score.ties  = 0,
+    score.win = 0,
+    score.loose = 0 
+    localStorage.removeItem('score'); //Remove the score & give null pointer, so to avoid null need to set the score values to 0 given below
+    updateScoreEle ();
+   "
+   class="resert-css">Reset Score
+   </button>
+
+
+   <script src="10-2-rock-paper-scissor.js"> </script>
+
+</body>
+</html>

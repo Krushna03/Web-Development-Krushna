@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Excersice</title>
+   <style>
+      .cart {
+         background-color: rgb(255,216,20);
+         padding : 7px 50px 7px 50px;
+         border-radius : 20px;
+         border : none;
+         font-family: arial;
+         font-size: large;
+      }
+      .request{
+         background-color: black;
+         color: white;
+         padding : 10px 20px 10px 20px;
+         border : none;
+         border-radius : 8px;
+      }
+      .schedule {
+         background-color: rgb(230,230,230);
+         color: black;
+         padding : 10px 20px 10px 20px;
+         border : none;
+         border-radius : 8px;
+         margin-left : 20px;
+         font-weight :bold;
+      }
+      .is-toggled {
+         background-color: black;
+         color : white;
+      }
+
+
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate-button {
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 12px 15px;
+        cursor: pointer;
+      }
+
+      /* Give the error message a red color. */
+      .error-message {
+        color: red;
+      }
+   </style>
+</head>
+<body>
+   
+   <button class="cart"> Add to Cart </button>
+   <br><br><br>
+   <button class="request">Request now</button>
+   <button class="schedule">Schedule for later</button>
+
+   <br><br><br><br>
+
+   <button class="js-button"> Test</button>
+
+   <br><br><br><br>
+
+   <button class="toggle-button1" onclick="toggleButton('toggle-button1')">Gaming</button>
+
+  
+   <button class="toggle-button2" onclick="toggleButton('toggle-button2')">Music</button>
+
+    
+
+   <button class="toggle-button3" onclick="toggleButton('toggle-button3')">Tech</button>
+
+<br><br><br><br>
+
+
+<p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
+      handleCostKeydown(event);
+    ">
+    <button onclick="
+      calculateTotal();
+    " class="calculate-button">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <!-- Create an element to display the error message. -->
+    <p class="js-error-message error-message"></p>
+
+
+
+
+<script>
+      const Element = document.querySelector('.js-button');
+      console.log(Element.classList.contains('js-button'));  //true
+
+
+
+   function toggleButton(buttonClass) {
+    const button = document.querySelector(`.${buttonClass}`);
+    if (!button.classList.contains('is-toggled')) {
+        turnOffPreviousButton();
+      button.classList.add('is-toggled');
+    } else {
+      button.classList.remove('is-toggled');
+    }
+  }
+  function turnOffPreviousButton() {
+  const previousButton = document.querySelector('.is-toggled');
+  if (previousButton) {
+    previousButton.classList.remove('is-toggled');
+  }
+}
+
+
+
+
+function handleCostKeydown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value);
+
+        // First, reset all previous messages.
+        document.querySelector('.js-total-cost')
+          .innerHTML = '';
+        document.querySelector('.js-error-message')
+          .innerHTML = '';
+
+        if (cost < 0) {
+          document.querySelector('.js-error-message')
+            .innerHTML = 'Error: cost cannot be less than $0';
+          // If we display an error, we can use return to
+          // end this function immediately. This is called
+          // an "early return" and it makes the code cleaner
+          // because it reduces nesting / indents.
+          return;
+        }
+
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost}`;
+      }
+      
+
+</script>
+
+
+
+</body>
+</html>
