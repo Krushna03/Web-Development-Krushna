@@ -1,0 +1,33 @@
+body {
+   background-color: black ;
+   font-family: arial;
+}
+
+.css-button {
+   height : 50px;
+   width : 50px;
+   border-radius: 50%;
+   background-color: rgb(79, 77, 77);
+   border: none;
+   color : white;
+   font-weight: 600;
+   font-size : 22px;
+   margin: 0px 5px 5px 5px;
+}
+
+.yellow {
+   background-color: orange;
+}
+
+.text-clear{
+   font-size : 15px;
+   font-weight: 400;
+}
+
+.result {
+   color : white;
+   font-size: 40px;
+   font-weight: 700;
+   margin: 10px 0px 30px 10px;
+   padding: 0px;
+}
