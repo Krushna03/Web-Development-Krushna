@@ -8,11 +8,11 @@
 <body>
    <script>
 //  1)    
-     const hour = 20;
-     if(hour < 6 &&  12 >= hour ){
+     const hour = 8;
+     if(hour >= 6 && hour <= 12 ){
        console.log('Good morning');
      }
-     else if( hour <= 13 && 17 >= hour ){
+     else if( hour >= 13 && hour <= 17 ){
       console.log('Good Afternoon');
      }
      else {
@@ -21,10 +21,10 @@
 
    //2)
      const name = 'Krushna';       
-     if(hour < 6 &&  12 >= hour ){
+     if( hour >= 6 && hour <= 12 ){
        console.log(`Good morning ${name}`);
      }
-     else if( hour <= 13 && 17 >= hour ){
+     else if( hour >= 13 && hour <= 17 ){
       console.log(`Good Afternoon ${name}`);
      }
      else {
@@ -43,10 +43,10 @@
 // 4)
     const isHoliday = true;
     if ((age <= 6 || age >= 65) && !isHoliday){
-      console.log('Discount');
+      console.log('No Discount');
     }
     else {
-      console.log('No Discount');
+      console.log('Discount');
     }
 
 // 5)

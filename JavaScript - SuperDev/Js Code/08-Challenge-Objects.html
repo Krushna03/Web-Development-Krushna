@@ -9,6 +9,11 @@
 
    <button onclick="playGame('heads')"> Heads</button>
    <button onclick="playGame('tails')"> Tails</button>
+   <button onclick="
+                    scores.wins = 0,
+                    scores.looses = 0
+                    localStorage.removeItem('scores');
+   ">Reset</button>
 
 
 <script>

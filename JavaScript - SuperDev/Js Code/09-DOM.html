@@ -12,6 +12,7 @@
    
    <Script>
 
+     // Part 1
        document.body.innerHTML = 'hello';
        document.title = 'Mom';
 
@@ -21,18 +22,23 @@
        console.log(document.body); //Everything inside body
        console.log(typeof document.body); //object
 
-       console.log(document.body.innerHTML); //changes everything inside the body related to html
-       document.body.innerHTML = 'changed';
-       document.body.innerHTML = '<button> Good job </button>';
+       console.log(document.body.innerHTML); //Gets everything inside the body related to html
+       document.body.innerHTML = 'changed'; //changed everything inside the body related to html
 
+      console.log(document.body.innerHTML = '<button>'); //hello
+        
+        
+   // Part 2
+      console.log(document.querySelector('button')); 
        
       console.log(document.querySelector('button').innerHTML);
 
       document.querySelector('button').innerHTML = 'Changed';
 
 
+   // Part 3
       //document.querySelector('.js-button'); 
-     const buttonElement = document.querySelector('.js-button').innerHTML;
+     const buttonElement = document.querySelector('.js-button');
      console.log(buttonElement);
 
      

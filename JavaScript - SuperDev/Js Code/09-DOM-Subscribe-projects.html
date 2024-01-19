@@ -34,14 +34,14 @@
     //It is always in front of console,document,alert but it is done by automatically becz we ultimately work on webpage so no need to write window. first for coder
 
    function subscribe(){
-      const subButton = document.querySelector('.js-subscribe');
+   const subButton = document.querySelector('.js-subscribe');
 
-      if(subButton.innerText === 'Subscribe') {
-         subButton.innerHTML = 'Subscribed';
-      }
-       else {
-         subButton.innerHTML = 'Subscribe';
-       }
+   if(subButton.innerText === 'Subscribe') { //innerText is used, Becz when space come the changes will not occur
+      subButton.innerHTML = 'Subscribed';
+   }
+     else {
+      subButton.innerHTML = 'Subscribe';
+     }
 //innerText help us with the space in the below Subscribe text
    }
 

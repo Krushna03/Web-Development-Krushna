@@ -22,37 +22,33 @@
       Scissor
    </button>
 
-   
-   <p class="js-result"></p>
-   <p class="js-moves"></p>
-   <p class="js-score"></p>
-
-
    <button  onclick ="
     score.ties  = 0,
     score.win = 0,
     score.loose = 0 
     localStorage.removeItem('score'); //Remove the score & give null pointer, so to avoid null need to set the score values to 0 given below
-    updateScoreEle (); //Update the score to zero
    ">Reset Score
    </button>
 
 
    <script>
-      let score = JSON.parse(localStorage.getItem('score'));
+      let score = JSON.parse(localStorage.getItem('score'))  || 
+                   {
+                     wins : 0,
+                     loose : 0,
+                     Tie : 0
+                  };
 
-      if( score === null ){
-         score = {
-          win : 0,
-         loose : 0,
-          ties : 0
-      };
-   }
+   //    if( score === null ){
+   //       score = {
+   //        win : 0,
+   //       loose : 0,
+   //        ties : 0
+   //    };
+   // }
    
     
-     updateScoreEle(); //Show the score on page 
-
-    //remove value from local storage 
+    //Give the value from local storage 
     //console.log(localStorage.getItem('message'));
 
     //console.log(JSON.parse(localStorage.getItem('score')));
@@ -114,26 +110,13 @@
 
       localStorage.setItem('score' , JSON.stringify(score) );
 // JSON convert above number to string
-
-
-      updateScoreEle();  //Update the score here
-
-
-      document.querySelector('.js-result')
-      .innerHTML = result;
-
-      document.querySelector('.js-moves')
-      .innerHTML = `You  ${playerMove} - ${computerMove} Computer` ;
-   
-   }
-   
-
-      function updateScoreEle (){ //Thus used this above and below
-         document.querySelector('.js-score')
-     .innerHTML = `You wins ${score.win}, Looses ${score.loose}, Ties ${score.ties}`;
+        
+        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+You wins ${score.win}, Looses ${score.loose}, Ties ${score.ties}`);
       }
-    
+   
 
+    
    function pickComputerMove(){
       randomNum = Math.random();
       computerMove = '';
