@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <script>
+         // 1 : Normal Function
+         // This function allows for Hoisting in that we can call the function above or below 
+         // ex : greeting();
+             function greeting() {
+              console.log( ' Hello ' );
+        }
+         // ex : greeting();
+
+
+
+         // 2 : Function act as value & Stored in a variable
+         //  This function not allows for Hoisting
+        const function1 = function greeting() {
+              console.log( ' Hello ' );
+        }
+        console.log( function1);
+        console.log( typeof function1);
+        function1();  // Calling function using the variable--function1.
+
+
+        // ShortCut : Anonymus function : Function without name : Acn call using variable
+        const function2 = function() {
+              console.log( ' Hello ' );
+        }
+        function2();
+
+
+         // 3 : Function act as value & Stored in a object
+        const object1 = {
+            nums : 2 ,
+
+            fun: function() {
+               console.log( 'Hello world');
+            }
+        };
+        object1.fun();
+
+
+
+         // 4 : Function act as value & Passing Function into another function.
+         function run(para) {
+            para();
+         }
+          
+         run( function() {     // CallBack function
+             console.log('Hello Krushna'); 
+         });
+
+
+
+         //5 : setTimeout() function
+         setTimeout( function() {
+             console.log( 'Time out - setTimeout');
+         }, 3000 );    // Delay to start the above function to execute
+         // 1000milisec == 1second , thus 3000milisec == 3second
+         console.log('Next line1');
+
+
+
+         //6 : setInterval() function
+         setInterval( function() {
+             console.log( 'Time out - setInterval');  //Loop of text after every 3 seconds
+         }, 3000 );   
+         console.log('Next line');
+
+
+
+         //For Each : It's a kind of a for loop
+          [ 
+            'make dinner',
+            'wash plates',
+            'make move'
+          ].forEach( function( value, index) {
+              console.log(index);
+              console.log(value);
+          });
+
+
+          
+          //For Each : return ok  :  continue not Ok
+          [ 
+            'make cinner',
+            'wash blates',
+            'make gove'
+          ].forEach( function( value, index) {
+            if ( value === 'wash blates'){
+                return;   //return instead of continue
+            }
+              console.log(index);
+              console.log(value);
+          });
+
+
+   </script>
+</body>
+</html>

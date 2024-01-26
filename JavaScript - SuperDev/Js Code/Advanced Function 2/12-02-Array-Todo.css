@@ -1,0 +1,49 @@
+      * {
+         font-family: arial;
+         background-color: black;
+         color : white;
+      }
+      .title {
+         font-size: 20px;
+         font-weight: 600;
+       }
+       .js-input {
+          padding : 10px;
+          font-size : 18px;
+          border : none;
+          border: 1px solid white;
+       }
+       .js-date {
+          padding : 10px;
+          font-size : 18px;
+          margin-left: 10px;
+          border : none;
+          border: 1px solid white;
+       }
+       .butt {
+         font-weight: 500;
+         width : 100px;
+         padding : 13px;
+         margin-left: 20px;
+         font-size : 18px;
+         background-color: green;
+         border: none;
+         color :white;
+       }
+       .js-div {
+         margin-top :20px;
+         font-size : 20px;
+         display: grid;
+         grid-template-columns: 210px 150px 100px;
+         column-gap : 47px;
+         row-gap: 15px;
+         align-items: center;
+       }
+       .delete-button {
+          border : none;
+          font-size : 16px;
+          color: white;
+          padding : 10px;
+          background-color: rgb(172, 2, 2);
+       }
+   

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Adavanced Function 2</title>
+</head>
+<body>
+
+   <button onclick="" class="js-click">Click</button>
+
+
+   <script>
+
+       //Regular Function
+       const regularFun = function(para, para2){
+         console.log('hello');
+       }
+
+
+        //Arrow Function (It works same as the regular function)
+      // const arrowFunction = (para, para2) => {   can use parameters as well.
+       const arrowFunction = (para, para2) => {
+          console.log( ' Hello ' );
+       };
+       arrowFunction();
+
+
+
+      //1 : One Parameter : Shortcut of ArrowFunction 
+       const oneParam = para => {
+           console.log(para + 1);
+       };
+
+
+      //2 : One Line Parameter : Shortcut of ArrowFunction 
+       const oneLine = () => 5 + 1;
+       console.log(oneLine());
+
+
+
+      //3 : Alsways use Arrow Fun When passing one function into another function.
+      [ 
+      'make dinner',
+      'wash plates',
+      'make move'
+      ].forEach( ( value, index) => {
+         console.log(index);
+         console.log(value);
+      });
+
+
+      // Methods inside object
+        const object2 = {
+           method: () => {  //Original Function
+
+           },
+           method() {    //Shortcut function
+
+           }
+        };
+
+
+
+        //Add Event Listener 
+         const buttonEle = document.querySelector('.js-click');
+
+         const EventFunction = () => {
+            console.log('click');
+         };
+
+         //Adds a event
+         buttonEle.addEventListener('click', EventFunction);
+
+         //Removes a event
+         buttonEle.removeEventListener('click', EventFunction);
+
+
+         //1.Multiple event listener for an event : advantage
+         buttonEle.addEventListener( 'click' , () => {
+            console.log('click2');
+         } );
+
+
+   </script>
+   
+</body>
+</html>
