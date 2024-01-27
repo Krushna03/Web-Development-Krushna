@@ -5,23 +5,23 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Rock Paper Scissor</title>
 
-   <link rel="stylesheet" href="12-1-rock-paper-scissor.css">
+   <link rel="stylesheet" href="12-02-rock-paper-scissor.css">
 
 </head>
 <body>
    <h1 class="title">Rock Paper Scissor</h1>
 
-   <button onclick="playGame('Rock');" class="button-style">
+   <button class="button-style js-button1">
      <img src="rock-emoji.png" class="Images-button">
    </button>
 
 
-   <button onclick="playGame('Paper');" class="button-style">
+   <button class="button-style js-button2">
       <img src="paper-emoji.png" class="Images-button">
    </button>
 
 
-   <button onclick="playGame('Scissor');"  class="button-style">
+   <button class="button-style js-button3">
      <img src="scissor-emoji.png" class="Images-button">
    </button>
 
@@ -31,19 +31,24 @@
    <p class="js-score score"></p>
 
 
-   <button  onclick ="
+    <button class="resert-css js-reset">Reset Score </button>
+   <!-- onclick ="
     score.ties  = 0,
     score.win = 0,
     score.loose = 0 
-    localStorage.removeItem('score'); //Remove the score & give null pointer, so to avoid null need to set the score values to 0 given below
-    updateScoreEle (); " 
-    class="resert-css">Reset Score
-   </button>
+    localStorage.removeItem('score'); 
+    updateScoreEle (); "  -->
 
-   <button class="js-autoPlay" onclick="autoPlay()">AutoPlay</button>
+   <button class="js-autoPlay">AutoPlay</button>   
+   <!-- onclick="autoPlay()" -->
 
 
-   <script src="12-1-rock-paper-scissor.js"> </script>
+   <p class="js-check">
+      <!-- <button>Yes</button>
+      <button>No</button> -->
+   </p>
+
+   <script src="12-02-rock-paper-scissor.js"> </script>
 
 </body>
 </html>

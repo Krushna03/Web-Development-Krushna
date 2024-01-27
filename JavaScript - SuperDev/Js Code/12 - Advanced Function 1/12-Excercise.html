@@ -6,12 +6,12 @@
    <title>Document</title>
 </head>
 <body>
-   
-   <button class="js-start" onclick="start()"> Start </button>
+    <!-- 3 , 4 -->
+   <button class="js-start" > Start </button>
 
 <br><br><br>
    <!-- 5 -->
-   <button class="js-cart" onclick="addToCart()">Add to Cart</button>
+   <button class="js-cart">Add to Cart</button>
    <p class="js-cart-added">  </p>
 
 
@@ -43,40 +43,68 @@
 
 
 
-        //3
-        function start() {
-           const finish = document.querySelector('.js-start');
 
-          setTimeout( function(){
-             finish.innerHTML = 'Finished!';
-          } , 1000);          
-        }
+      //3
+      //   function start() {
+      //      const finish = document.querySelector('.js-start');
+
+      //     setTimeout( function(){
+      //        finish.innerHTML = 'Finished!';
+      //     } , 1000);          
+      //   }
 
 
 
-        //4
-        function start() {
-           const finish = document.querySelector('.js-start');
+
+
+      //4 : Event Listener
+        let finish = document.querySelector( '.js-start' );
+         
+        finish.addEventListener( 'click' , () => { 
            finish.innerHTML = 'Loading...';
-          
+
            setTimeout( function(){
              finish.innerHTML = 'Finished!';
-          } , 3000);          
-        }
+          } , 3000);    
+         });
+
+       //4 : Onclick start()
+      //   function start() {
+      //      const finish = document.querySelector('.js-start');
+      //      finish.innerHTML = 'Loading...';
+          
+      //      setTimeout( function(){
+      //        finish.innerHTML = 'Finished!';
+      //     } , 3000);          
+      //   }
+
+
 
 
 
         //5
-        function addToCart() {
-           const cart = document.querySelector('.js-cart-added');
+        let cart = document.querySelector('.js-cart-added');
+         
+         cart.addEventListener( 'click' , () => { 
            cart.innerHTML = 'Added';
+ 
+            setTimeout( function(){
+               cart.innerHTML = '';
+           } , 2000);    
+          });
 
-           setTimeout( function() {
-                cart.innerHTML = '' ;
-            }, 2000 );
-           }
+      //   function addToCart() {
+      //      const cart = document.querySelector('.js-cart-added');
+      //      cart.innerHTML = 'Added';
+
+      //      setTimeout( function() {
+      //           cart.innerHTML = '' ;
+      //       }, 2000 );
+      //      }
 
 
+
+      
          // //6
          // setInterval( function() {
          //     if( document.title === 'App'){
@@ -89,7 +117,7 @@
 
 
 
-        //7 
+      //7 
       //   let message = 2;
       //   setInterval( function(){
       //      if( document.title === 'App' ){

@@ -42,3 +42,11 @@
    padding : 8px 15px;
    cursor : pointer;
  }
+
+
+ .js-check{
+   font-size : 1.6rem;
+ }
+ .js-check button{
+  font-size : 1.6rem;
+}

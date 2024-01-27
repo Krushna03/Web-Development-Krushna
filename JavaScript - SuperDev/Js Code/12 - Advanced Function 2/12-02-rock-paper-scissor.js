@@ -24,6 +24,7 @@
 
          function autoPlay() { 
             if( !isAutoPlay ) {
+               document.querySelector('.js-autoPlay').innerHTML = 'Stop Playing';
                intervalId = setInterval (() => {
                 const playerMove = pickComputerMove();
                playGame(playerMove);
@@ -33,6 +34,7 @@
          else {
             clearInterval(intervalId); //Remove the recent id of that interval
             isAutoPlay = false;
+            document.querySelector('.js-autoPlay').innerHTML = 'Auto Play';
          }
       }
 
@@ -53,15 +55,35 @@
       } );
 
 
+
     // Added Event Listener To reset button
       document.querySelector('.js-reset')
       .addEventListener('click' , () => {
-         score.ties  = 0,
-         score.win = 0,
-         score.loose = 0 
-         localStorage.removeItem('score'); 
-         updateScoreEle (); 
-      } );
+         if ( score.ties !== 0 || score.win !== 0 ||score.loose !== 0 ) {
+            document.querySelector('.js-check').innerHTML = `Are you sure you want to reset the score?   <button class="js-yes">Yes</button>
+            <button class="js-No">No</button> ` 
+         }
+         else if(score.ties === 0 && score.win === 0 && score.loose === 0 ){
+            document.querySelector('.js-check').innerHTML = '';
+         }
+
+            document.querySelector('.js-yes').addEventListener('click' , () => {
+               score.ties  = 0,
+               score.win = 0,
+               score.loose = 0 
+               localStorage.removeItem('score'); 
+               updateScoreEle (); 
+               document.querySelector('.js-check').innerHTML = '';
+            } );     
+           
+            document.querySelector('.js-No').addEventListener('click' , () => {
+               document.querySelector('.js-check').innerHTML ='';
+            });
+
+         });
+
+
+      
 
 
       // Added Event Listener To AutoPlay button
@@ -84,6 +106,23 @@
          }
       });
 
+
+
+      document.body.addEventListener('keydown',(event) => {
+         if( event.key === 'a'){
+           autoPlay();
+         }
+
+         if( event.key === 'Backspace'){
+           score.ties  = 0,
+           score.win = 0,
+           score.loose = 0 
+           localStorage.removeItem('score'); 
+           updateScoreEle ();
+         }
+     });
+
+     
 
       function playGame(playerMove) {
          computerMove = pickComputerMove();

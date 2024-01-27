@@ -19,18 +19,36 @@
       let isAutoPlay = false;
       let intervalId ;
          function autoPlay() {
+            document.querySelector('.js-autoPlay').innerHTML = 'Stop Playing';
             if( !isAutoPlay ) {
                intervalId = setInterval ( function() {
                 const playerMove = pickComputerMove();
                playGame(playerMove);
-            }, 2000 );
+            }, 1000 );
             isAutoPlay = true;
          }
          else {
             clearInterval(intervalId); //Remove the recent id of that interval
             isAutoPlay = false;
+            document.querySelector('.js-autoPlay').innerHTML = 'Auto Play';
          }
       }
+
+
+
+      document.body.addEventListener('keydown',(event) => {
+          if( event.key === 'a'){
+            autoPlay();
+          }
+
+          if( event.key === 'Backspace'){
+            score.ties  = 0,
+            score.win = 0,
+            score.loose = 0 
+            localStorage.removeItem('score'); 
+            updateScoreEle ();
+          }
+      });
 
 
 
@@ -42,7 +60,7 @@
             if (computerMove === "Rock") {
                result = "You loose.";
             } 
-            else if (computerMove === "Paper") {
+            else if (computrMove === "Paper") {
                result = "You win.";
             } 
             else if (computerMove === "Scissor") {
