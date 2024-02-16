@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+// Callback Hell = Situation in JavaScript where callbacks are nested within other callbacks to the degree where the code is difficult to read. 
+//Old pattern to handle asynchronous functions. 
+//Use Promises + async/await callback hell
+
+
+
+
+      //  CallBack function 1
+      function getData(dataId, getNextData){
+            setTimeout( () => {
+               console.log('data', dataId);
+            if(getNextData){
+               getNextData();
+            }
+            }, 2000);
+         }
+
+    //callbach hell
+     getData( 1, () => {
+      getData(2 , () => { 
+         getData(3 , () => { 
+         getData(4);
+      });
+      });
+    });
+
+    
+
+
+   // CallBack Hell function 2
+    function task1(Callback) {
+      setTimeout(() => {
+         console.log('Task 1 completed');
+         Callback();
+      }, 4000);
+    }
+
+    function task2(Callback) {
+      setTimeout(() => {
+         console.log('Task 2 completed');
+         Callback();
+      }, 2000);
+    }
+
+    function task3(Callback) {
+      setTimeout(() => {
+         console.log('Task 3 completed');
+         Callback();
+      }, 3000);
+    }
+
+    function task4(Callback) {
+      setTimeout(() => {
+         console.log('Task 4 completed');
+         Callback();
+      }, 1000);
+    }
+
+    task1( () => {
+      task2( () => {
+         task3( ()=> {
+            task4( () => console.log('All task completed') )
+         });
+      });
+    });
+    
+    
+   </script>
+</body>
+</html>

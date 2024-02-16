@@ -2,7 +2,6 @@
 
      function updateCalculation(value){
          calculation = calculation + value;
-
          Output();
 
          localStorage.setItem('Calculation' , calculation);

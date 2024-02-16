@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <p class="para"></p>
+   <button class="but">Get a Fact</button>
+   <script>
+      let url = "https://cat-fact.herokuapp.com/facts";
+      const factPara = document.querySelector('.para');
+      const btn = document.querySelector('.but');
+
+      const getFacts = async () => {
+         console.log("getting data.....");
+         let response = await fetch(url);
+         console.log(response); // Not in JSON format, like we want the data in a way we want information.
+         
+         let data = await response.json(); //Thus we get the original data using the json() method.
+
+         console.log(data);
+
+         factPara.innerText = data[2].text;
+      }
+
+      btn.addEventListener('click' ,getFacts) ;
+
+      // function getFacts() {
+      //    fetch(url).then((response) => {
+      //       return response.json();
+      //    })
+      //    .then( (data) => {
+      //       console.log(data);
+      //       factPara.innerText = data[2].text;
+      //    })
+      // }
+   </script>
+</body>
+</html>

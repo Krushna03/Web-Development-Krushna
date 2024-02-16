@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div class="display"></div>
+   <button class="start">Start</button>
+   <button class="reset">Reset</button>
+   
+   <script>
+       let index = 0; // Add an index to keep track of the current value
+   
+       let count = document.querySelector('.start');
+   
+       let isAutoPlay = false;
+       let intervalId ;
+       if( !isAutoPlay ) { 
+        count.addEventListener('click', () => {
+        intervalId = setInterval(() => {               
+                loop();              
+           }, 1000); 
+       });
+       isAutoPlay = true;
+    }
+    else {
+        clearInterval(intervalId); //Remove the recent id of that interval
+            isAutoPlay = false;
+            reset();
+    }
+   
+       function loop() {
+               document.querySelector('.display').innerHTML = index;
+               index++;
+           }
+
+       
+       // Add an event listener to the reset button
+    //    document.querySelector('.reset').addEventListener('click', reset);
+       
+       function reset() {
+        document.querySelector('.reset').addEventListener('click', reset);
+           index = 0;
+           document.querySelector('.display').innerHTML = index;
+       }
+
+
+   </script>
+</body>
+</html>
