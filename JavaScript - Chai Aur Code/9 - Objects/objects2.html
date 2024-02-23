@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      // #Singleton/contructor (way of object declaration)
+
+      // const tinderUser = new Object() singleton object
+     
+      const tinderUser = {}    //non-singleton object
+
+      tinderUser.id = "123abc"
+      tinderUser.name = "Sammy"
+      tinderUser.isLoggedIn = false
+
+      // console.log(tinderUser);
+
+      const regularUser = {
+         email: "some@gmail.com",
+         fullname: {
+            userfullname: {
+                  firstname: "hitesh",
+                  lastname: "choudhary"
+            }
+         }
+      }
+
+      // console.log(regularUser.fullname.userfullname.firstname);
+
+      const obj1 = {1: "a", 2: "b"}
+      const obj2 = {3: "a", 4: "b"}
+      const obj4 = {5: "a", 6: "b"}
+
+      // const obj3 = { obj1, obj2 }
+      // const obj3 = Object.assign({}, obj1, obj2, obj4)  here {} is used to store the result of the next obj1,obj2,..  object. if {} not given then all obj will store in obj1.
+   
+
+      //spread method to merge two object
+      const obj3 = {...obj1, ...obj2}
+      // console.log(obj3);
+
+
+      const users = [
+         {
+            id: 1,
+            email: "h@gmail.com"
+         },
+         {
+            id: 1,
+            email: "h@gmail.com"
+         },
+         {
+            id: 1,
+            email: "h@gmail.com"
+         },
+      ]
+
+      users[1].email
+      // console.log(tinderUser);
+
+      // Converts the values/keys to array format.
+      // console.log(Object.keys(tinderUser));
+      // console.log(Object.values(tinderUser));
+      // console.log(Object.entries(tinderUser));
+
+      // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+
+      // Object destructuring
+      const course = {
+         coursename: "js in hindi",
+         price: "999",
+         courseInstructor: "hitesh"
+      }
+
+      // course.courseInstructor
+
+      // const {courseInstructor} = course
+      const {courseInstructor: instructor} = course
+
+      // console.log(courseInstructor);
+      console.log(instructor);
+
+      // {
+      //     "name": "hitesh",
+      //     "coursename": "js in hindi",
+      //     "price": "free"
+      // }
+
+      [
+         {},
+         {},
+         {}
+      ]
+   </script>
+</body>
+</html>

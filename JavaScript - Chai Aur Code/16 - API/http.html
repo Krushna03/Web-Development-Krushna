@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+     
+    <button> Get Hitesh Choudhary</button>
+    <img class="image" src="" alt="">
+    <p class="follower"></p>
+
+   <script>
+      let follower;
+      let img;
+      
+      //So using below code we requested the api by using http mode
+        const requestURL = 'https://api.github.com/users/hiteshchoudhary'
+        let xml = new XMLHttpRequest();
+        xml.open('GET' , requestURL);
+        xml.onreadystatechange = function(){  // continuously track the request
+           console.log(xml.readyState); //gives the state of request as per table
+           if(xml.readyState === 4){
+            const data = JSON.parse(this.responseText);  //converted string to the JSON
+             console.log(typeof data); //object before string tha
+             console.log(data);
+             console.log(data.followers);
+             follower = data.followers;
+             img = data.avatar_url
+           }
+        }
+        xml.send();
+
+        document.querySelector('button').addEventListener('click', ()=>{
+            document.querySelector('.image').src = img;
+            document.querySelector('.follower').innerHTML = `Followers: ${follower}`;
+        })
+
+   </script>
+</body>
+</html>

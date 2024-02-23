@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      // Immediately Invoked Function Expressions (IIFE)
+
+
+      (function chai(){
+         // named IIFE
+         console.log(`DB CONNECTED`);
+      })();
+      //It is very imp to give ; semi-colun at the end of the IIFE function otherwise it doesnot allow the further functions to run
+
+      ( (name) => {
+         // un-named IIFE with parameter
+         console.log(`DB CONNECTED TWO ${name}`);
+      } )('hitesh');
+
+      ( () => {
+         // un-named IIFE
+          console.log("krushamn");
+      }) ();
+      
+      </script>
+   </body>
+   </html>

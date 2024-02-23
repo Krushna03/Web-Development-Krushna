@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      // array
+
+      const myArr = [0, 1, 2, 3, 4, 5]
+      const myHeors = ["shaktiman", "naagraj"]
+
+      const myArr2 = new Array(1, 2, 3, 4)
+      // console.log(myArr[1]);
+
+      // Array methods
+
+      // myArr.push(6)
+      // myArr.push(7)
+      // myArr.pop()
+
+      // myArr.unshift(9)
+      //Adds the 9 element at the start index and remove last index element and shift each element to right by one. 
+      // myArr.shift()
+      //It removes the 1st index of the array and shift all the elements to the left.
+      // console.log(myArr);
+
+      // console.log(myArr.includes(9));
+      // console.log(myArr.indexOf(3));
+
+      const newArr = myArr.join()
+      //converts the new array into string
+      // console.log(typeof newArr);  //string
+      const newArr1 = Array(newArr);
+      console.log(myArr);
+      console.log( newArr1);
+
+
+     // slice, splice
+     // slice : Adds teh indexed elements to the new array 
+     // Splice : Removes the indexed elements from the array
+      // console.log("A ", myArr);
+
+      const myn1 = myArr.slice(1, 3)
+      // console.log(myn1);
+
+      // console.log("B ", myArr);
+
+      const myn2 = myArr.splice(1, 3)
+      // console.log("C ", myArr);
+      // console.log(myn2);
+
+      // console.log(myArr);
+      
+   </script>
+</body>
+</html>

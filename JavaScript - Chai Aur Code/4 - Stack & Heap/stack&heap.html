@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      //stack(primitive) , Hea(non-primitive)
+      
+      let myYoutubename = "hiteshchaudharydotcom";
+      let anotherName = myYoutubename;
+      console.log(anotherName); //hiteshchaudharydotcom
+      
+      anotherName = "chaiAurCode";
+     //jab ham variable ke data ko copy karte hai dusre variable me just like above tab stack me original variable copy hota hai 
+
+      console.log(anotherName); //chaiAurCode
+      console.log(myYoutubename); //hiteshchaudharydotcom
+
+
+      let userOne = {
+         email: "user@gogle.com",
+         upi: "user@ybl"
+      }
+
+      let userTwo = userOne;
+
+      userTwo.email = "hitesh@google.com";
+      console.log(userOne);
+      console.log(userTwo);
+      
+      //jab ham refernece dete hai kisi aur variable ko, apne variable ka, aur agar vo kuch changes karta hai toh vo original data change hota hai becz both the variables pointing to the same data becz of reference, jo ki stack me copy hota hai data. So data change ka tension nhi hota.
+
+
+      const name = new String("krushna"); 
+   </script>
+</body>
+</html>

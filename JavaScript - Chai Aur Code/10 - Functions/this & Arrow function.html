@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <script>
+      const user = {
+    username: "hitesh",
+    price: 999,
+
+    welcomeMessage: function() {
+        console.log(`${this.username} , welcome to website`);
+        console.log(this);
+    }
+
+}
+
+// user.welcomeMessage()
+// user.username = "sam"
+// user.welcomeMessage()
+
+// console.log(this);
+
+
+   function chai3(){
+    let username = "hitesh"
+    console.log(this.username);
+  }
+
+chai3()  // output : undefined
+
+
+const chai1 = function () {
+    let username = "hitesh"
+    console.log(this.username);
+}
+chai1()  //output : undefined
+
+
+
+const chai2 = () => {
+    let username = "hitesh"
+    console.log(this);
+}
+chai2()  //output : undefined but window in console
+
+
+
+const addTwo1 = (num1, num2) => {
+    return num1 + num2
+}
+
+const addTwo2 = (num1, num2) =>  num1 + num2
+
+const addTwo3 = (num1, num2) => ( num1 + num2 )
+// It is necesaary to provide ()parenthesis to the output portion so that to avoid the error in result & espcially in the below code
+const addTwo4 = (num1, num2) => ({username: "hitesh"})
+
+console.log(addTwo3(3, 4))
+
+
+const myArray = [2, 5, 3, 7, 8]
+
+//  myArray.forEach()
+
+   </script>
+</body>
+</html>

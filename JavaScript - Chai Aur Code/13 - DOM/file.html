@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white">
+    <div class="box">One</div>
+    <div class="box">Two</div>
+    <div class="box">Three</div>
+
+    <script>
+      // ||  NOTE IMP  ||
+
+      // When we select document.querySelector('.box') only 1st div will get selected even if the class is same for the below divs
+      // When using document.querySelectorAll('.box') all elements ka access rahega but can perform action using show below way or by using the forEach loop. We get nodeList using this
+
+        const sl = document.querySelectorAll('.box')
+        
+        sl[2].style.color = "blue"
+
+    </script>
+</body>
+</html>
